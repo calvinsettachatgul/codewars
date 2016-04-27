@@ -39,43 +39,32 @@ var powerSet = function(arr){
     // console.log(subresult);
 
     if(depth === arr.length ){
-    //    // console.log("in if");
-    //    // console.log(subresult);
-    //    // result.push(subresult);
-
        console.log(partial);
        result.push(partial)
        return;
 
 
-    //    console.log(result);
-    //    return;
     }else{
 
-    //   // pushNewItem(subresult, depth+1);
-    //   // console.log("subresult");
-    //   // console.log(subresult);
-    //   pushNewItem(subresult, depth + 1);
-    //   subresult.push(arr[depth])
 
       // console.log(partial)
-      pushNewItem(partial, depth + 1);
+      pushNewItem(partial.concat(), depth + 1);
       // console.log(partial)
-      pushNewItem(partial + arr[depth], depth + 1);
+      pushNewItem(partial.concat(arr[depth]), depth + 1);
     }
   }
 
-  pushNewItem("" , firstDepth);
+  pushNewItem([] , firstDepth);
 
   return result;
 }
 
 testArr = [1,2,3];
-// testArrShort = [1,2];
+testArrShort = [1,2];
 
 // console.log(powerSet(testArr));
 console.log(powerSet([1,2, 3]))
 
-// console.log(powers(testArrShort) === 4)
-// console.log(powers(testArr) === 8)
+console.log(powers(testArrShort) === 4)
+console.log(powers(testArr) === 8)
 
