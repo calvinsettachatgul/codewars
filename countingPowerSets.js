@@ -38,7 +38,7 @@ var powerSet = function(arr){
   var pushNewItem = function(partial, depth){
     // console.log(subresult);
 
-    if(depth >= arr.length ){
+    if(depth === arr.length ){
     //    // console.log("in if");
     //    // console.log(subresult);
     //    // result.push(subresult);
@@ -59,16 +59,13 @@ var powerSet = function(arr){
     //   subresult.push(arr[depth])
 
       // console.log(partial)
-      var partial1 = partial
-      var partial2 = partial;
-      pushNewItem(partial1, depth + 1);
-       partial2.push(arr[depth])
+      pushNewItem(partial, depth + 1);
       // console.log(partial)
-      pushNewItem(partial2, depth + 1);
+      pushNewItem(partial + arr[depth], depth + 1);
     }
   }
 
-  pushNewItem([] , firstDepth);
+  pushNewItem("" , firstDepth);
 
   return result;
 }
