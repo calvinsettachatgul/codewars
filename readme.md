@@ -1,4 +1,4 @@
-#### Tring to do the codewars excercises everyday => kata!
+#### Tring to do the codewars excercises everyday => KATAAAA!
 
 #### what is the difference between Array.push() and Array.concat()
 
