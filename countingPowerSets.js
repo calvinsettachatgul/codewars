@@ -39,7 +39,6 @@ var powerSet = function(arr){
     // console.log(subresult);
 
     if(depth === arr.length ){
-       console.log(partial);
        result.push(partial)
        return;
 
@@ -47,10 +46,10 @@ var powerSet = function(arr){
     }else{
 
 
+      pushNewItem(partial.concat(arr[depth]), depth + 1);
       // console.log(partial)
       pushNewItem(partial.concat(), depth + 1);
       // console.log(partial)
-      pushNewItem(partial.concat(arr[depth]), depth + 1);
     }
   }
 
