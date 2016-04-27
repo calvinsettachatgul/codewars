@@ -37,6 +37,7 @@ var powerSet = function(arr){
 
   var pushNewItem = function(partial, depth){
     // console.log(subresult);
+
     if(depth >= arr.length ){
     //    // console.log("in if");
     //    // console.log(subresult);
