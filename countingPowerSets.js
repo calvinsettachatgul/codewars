@@ -31,32 +31,53 @@ var powers = function(arr){
 };
 
 var powerSet = function(arr){
-
+  result = [];
   //arr = [1,2,3]
-  var result = [];
-  var currentIndex = 0;
+  var firstDepth = 0;
 
-  var pushNewItem = function(subresult, depth){
-    console.log(subresult);
-    if(depth === arr.length -1){
-       console.log("in if");
-       console.log(subresult);
-       result.push(subresult);
+  var pushNewItem = function(partial, depth){
+    // console.log(subresult);
+    if(depth >= arr.length ){
+    //    // console.log("in if");
+    //    // console.log(subresult);
+    //    // result.push(subresult);
+
+       console.log(partial);
+       result.push(partial)
+       return;
+
+
+    //    console.log(result);
+    //    return;
     }else{
-      console.log("in else")
-      subresult = subresult.push(arr[depth]);
-      pushNewItem(subresult, depth+1)
+
+    //   // pushNewItem(subresult, depth+1);
+    //   // console.log("subresult");
+    //   // console.log(subresult);
+    //   pushNewItem(subresult, depth + 1);
+    //   subresult.push(arr[depth])
+
+      // console.log(partial)
+      var partial1 = partial
+      var partial2 = partial;
+      pushNewItem(partial1, depth + 1);
+       partial2.push(arr[depth])
+      // console.log(partial)
+      pushNewItem(partial2, depth + 1);
     }
   }
 
-  pushNewItem([] , currentIndex);
+  pushNewItem([] , firstDepth);
 
   return result;
 }
 
 testArr = [1,2,3];
-testArrShort = [1,2];
+// testArrShort = [1,2];
 
-console.log(powers(testArrShort) === 4)
-console.log(powers(testArr) === 8)
+// console.log(powerSet(testArr));
+console.log(powerSet([1,2, 3]))
+
+// console.log(powers(testArrShort) === 4)
+// console.log(powers(testArr) === 8)
 
