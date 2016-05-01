@@ -22,19 +22,57 @@
 #   return sum
 # end
 
+# still doesn't work
+# def f(n, m)
+
+#   sum = 0
+
+#   counter = 1
+
+#   while( counter <= n) do
+#     sum = sum + counter % m
+#     counter += 1
+#   end
+
+#   return sum
+# end
+
 def f(n, m)
 
-  sum = 0
-
-  counter = 1
-
-  while( counter <= n) do
-    sum = sum + counter % m
-    counter += 1
+  partial_sum = 0
+  partial_sum_counter = 1
+  while(partial_sum_counter < m) do
+    partial_sum = partial_sum + partial_sum_counter
+    # puts partial_sum_counter
+    partial_sum_counter += 1
   end
 
-  return sum
+
+  partial_sum_repeat = n/m
+  puts "partial_sum_repeat is"
+  puts partial_sum_repeat
+
+  partial_sum_remainder = n % m
+  puts "partial_sum_remainder is"
+  puts partial_sum_remainder
+
+  remainder_sum = 0
+  partial_sum_pointer = partial_sum_remainder
+
+  partial_sum_remainder.times do
+    remainder_sum += partial_sum_pointer
+    partial_sum_pointer -= 1
+  end
+
+  return partial_sum_repeat * partial_sum + remainder_sum
+
 end
+
+puts f(10, 5)
+
+# sum of 1 to m-1
+
+
 
 puts f(58020, 22704)
 
