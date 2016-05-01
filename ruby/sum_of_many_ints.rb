@@ -41,11 +41,13 @@ def f(n, m)
 
   partial_sum = 0
   partial_sum_counter = 1
-  while(partial_sum_counter < m) do
-    partial_sum = partial_sum + partial_sum_counter
-    # puts partial_sum_counter
-    partial_sum_counter += 1
-  end
+  # while(partial_sum_counter < m) do
+  #   partial_sum = partial_sum + partial_sum_counter
+  #   # puts partial_sum_counter
+  #   partial_sum_counter += 1
+  # end
+
+  partial_sum = m* (m+1)/2 - m
 
 
   partial_sum_repeat = n/m
