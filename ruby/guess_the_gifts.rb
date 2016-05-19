@@ -41,3 +41,21 @@
 # ]
 
 # guess_gifts(wishlist, presents) # must return ['toy car', 'mini puzzle']
+
+def guess_gifts(wishlist, presents)
+  # TODO
+  wishlist.each do | wish |
+      presents.each do| present |
+        found = true;
+        present.each do| characteristic, value|
+          if ( present[characteristic] !==  wish[characteristic]) do
+            found = false;
+          end
+          if(found)
+
+          end
+        end
+
+      end # end present
+   end # end wishlist
+end
