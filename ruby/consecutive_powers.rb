@@ -32,18 +32,26 @@ FUNDAMENTALSCONTROL FLOWBASIC LANGUAGE FEATURESMATHEMATICSALGORITHMSNUMBERSFUNCT
 
 def sum_dig_pow(a, b)
   # your code here
+	result = []
 	for i in (a..b) do 
-	   puts i
+	   if (check_eureka(i))
+	#	puts "its good"
+		result.push(i.to_i)
+           end
+	  # puts i
 	end
+	return result
 end
 
 def check_eureka num_int
+	
 	# puts "eureka!"
 	num_int_array = num_int.to_s.split("")
 	# p num_int_array
 	sum = 0;
 	num_int_array.each_with_index do | num, index |
 	    sum = sum + num.to_i**(index+1)
+	#	puts num
 	end
         # p sum	
 	# p sum == num_int
@@ -58,4 +66,5 @@ end
  puts false == check_eureka(1234)
 
 
-sum_dig_pow(1, 10)
+p sum_dig_pow(1, 10)
+p sum_dig_pow(50, 150)
