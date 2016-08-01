@@ -79,8 +79,24 @@ SKIPUNLOCK SOLUTIONSRESETRUN TESTSSUBMIT
 
 =end
 
-puts "solution to gree is good"
+puts "solution to greed is good"
 
 def score ( dice)
 	# fill me in
+	score_hash = {
+			[ 1, 3] => 1000,
+			[ 6, 3] => 600,
+			[ 5, 3] => 500,
+			[ 4, 3] => 400,
+			[ 3, 3] => 300,
+			[ 2, 3] => 200,
+			[ 1, 1] => 100,
+			[ 5, 1] => 50,
+			}
+
+	puts score_has
 end
+
+score([1,2,3,4,5,6])
+
+
