@@ -94,9 +94,25 @@ def score ( dice)
 			[ 5, 1] => 50,
 			}
 
-	puts score_has
+	puts score_hash
 end
 
-score([1,2,3,4,5,6])
+def count( dice_array)
+	roll_frequency = {}
 
+	dice_array.each do | roll |
+		if(roll_frequency[roll] == nil )
+			roll_frequency[roll] = 1
+		else
+			roll_frequency[roll] += 1
+		end
+	end
 
+	roll_frequency
+end
+test_roll = [1,2,3,4,5,6]
+score( test_roll )
+
+score_count = count( test_roll )
+
+puts score_count
