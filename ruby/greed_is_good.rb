@@ -81,6 +81,8 @@ SKIPUNLOCK SOLUTIONSRESETRUN TESTSSUBMIT
 
 puts "solution to greed is good"
 
+
+
 def score ( dice)
 	# fill me in
 	score_hash = {
@@ -96,6 +98,8 @@ def score ( dice)
 
 	puts score_hash
 end
+
+
 
 def count( dice_array)
 	roll_frequency = {}
