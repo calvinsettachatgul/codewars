@@ -99,7 +99,9 @@ def score ( dice)
 	puts score_hash
 end
 
-
+def score_valid( roll_value, frequency_hash, score_hash)
+	if( frequency_hash[roll_value] >= 
+end
 
 def count( dice_array)
 	roll_frequency = {}
